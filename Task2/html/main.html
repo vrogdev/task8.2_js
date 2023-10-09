@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<!--<link href="https://fonts.googleapis.com/css?family=Merriweather:400,900,900i" rel="stylesheet">-->
+<link href="../styles/Header.css" rel="stylesheet">
+<link href="../styles/Main.css" rel="stylesheet">
+<link href="../styles/BackToTop.css" rel="stylesheet">
+<script src="../script/utils/DOMElementFactory.js" defer></script>
+<script src="../script/utils/datasource.js" defer></script>
+<script src="../script/main/infinite_scroll.js" defer></script>
+<script src="../script/main/to_top.js" defer></script>
+<script src="../script/main/search.js" defer></script>
+<script src="../script/cart/add_to_cart.js" defer></script>
+<script src="../script/auth/logout.js" defer></script>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Main</title>
+</head>
+<body>
+
+<template id="certificate-tpl-main">
+    <div class="full-width">
+        <div class="flex-column">
+            <a class="itemLink" href="details.html">
+                <div class="img-container"></div>
+            </a>
+            <div class="description-container flex-column">
+                <div class="flex-between">
+                    <a class="itemLink" href="details.html">
+                        <span id="coupon-name-tpl">Coupon Name</span>
+                    </a>
+                    <span class="material-icons gray-icon regular">favorite</span>
+                </div>
+                <div class="flex-between">
+                    <span class="smaller" id="description-tpl">Some brief description</span>
+                    <span class="smaller gray" id="expiration-tpl">Expires in 3 days</span>
+                </div>
+                <div class="flex-between">
+                    <span class="price" id="price-tpl">$235</span>
+                    <input type="hidden" id="certificateId" value=""/>
+                    <button name="addToCart" class="add-to-cart-btn" id="addToCart">Add to
+                        cart
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<template id="tag-tpl-main">
+    <div class="full-width">
+        <div class="flex-column">
+            <div class="img-container"></div>
+            <div class="description-container flex-column">
+                <div class="flex-between">
+                    <span id="tag-name-tpl">Tag Name</span>
+                    <span class="material-icons gray-icon regular">favorite</span>
+                </div>
+                <div class="flex-between">
+                    <span class="smaller gray">Tag</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+
+<header>
+    <div class="header-container">
+        <div class="navbar">
+            <div class="container nav-container">
+                <div class="menu-size-container">
+                    <button class="menu-btn">
+                        <div class="hamburger-lines">
+                            <span class="line line1"></span>
+                            <span class="line line2"></span>
+                            <span class="line line3"></span>
+                        </div>
+                    </button>
+                    <a href="main.html"><img src="../img/epam_logo.svg" alt="Logo" class="header-logo"></a>
+                </div>
+                <div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header-container">
+        <form action="" method="get">
+            <span class="deleteicon">
+                <input name="searchBox" id="search-box" class="search-box" type="search"/>
+                <span id="clear-btn" class="search-clear-btn">x</span>
+            </span>
+            <select id="search-category" class="select-search-box">
+                <option value="all" selected>All categories</option>
+                <option value="certificates">Certificates</option>
+                <option value="tags">Tags</option>
+            </select>
+        </form>
+    </div>
+    <div class="header-container header-container-links">
+        <span class="material-icons gray-icon">favorite</span>
+        <a href="checkout.html"><span class="material-icons gray-icon">shopping_cart</span></a>
+
+        <ul>
+            <li><a href="login.html" class="header-link" id="loginLink">Login</a></li>
+            <li><a href="register.html" class="header-link">Sign Up</a></li>
+        </ul>
+    </div>
+</header>
+
+
+<div class="category-container ">
+    <div class="flex-space-around-center" id="categoryBox">
+        <div class="category-box" id="certCat">
+            <div class="img-box"></div>
+            <span>Certificates</span>
+        </div>
+        <div class="category-box" id="tagsCat">
+            <div class="img-box"></div>
+            <span>Tags</span>
+        </div>
+    </div>
+</div>
+
+<div class="main-container">
+    <div id="content-container" class="content-container">
+
+    </div>
+</div>
+
+<a id="scroll-button"></a>
+
+</body>
+</html>

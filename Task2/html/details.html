@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="../styles/Header.css" rel="stylesheet">
+<link href="../styles/Details.css" rel="stylesheet">
+<script src="../script/utils/datasource.js" defer></script>
+<script src="../script/details/details.js" defer></script>
+<script src="../script/cart/add_to_cart.js" defer></script>
+<script src="../script/auth/logout.js" defer></script>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Details</title>
+</head>
+<body>
+<header>
+    <div class="header-container">
+        <div class="navbar">
+            <div class="container nav-container">
+                <div class="menu-size-container">
+                    <button class="menu-btn">
+                        <div class="hamburger-lines">
+                            <span class="line line1"></span>
+                            <span class="line line2"></span>
+                            <span class="line line3"></span>
+                        </div>
+                    </button>
+                    <a href="main.html"><img src="../img/epam_logo.svg" alt="Logo" class="header-logo"></a>
+                </div>
+                <div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header-container header-container-links">
+        <span class="material-icons gray-icon">favorite</span>
+        <a href="checkout.html"><span class="material-icons gray-icon">shopping_cart</span></a>
+
+        <ul>
+            <li><a href="login.html" class="header-link" id="loginLink">Login</a></li>
+            <li><a href="register.html" class="header-link">Sign Up</a></li>
+        </ul>
+    </div>
+</header>
+
+<div class="details-container flex-center-column">
+    <div class="details-flex-template-box">
+        <div class="img-box"></div>
+        <div class="information-box">
+            <div>
+                <span style="font-weight: bold; font-size: 3cap" id="itemName"></span>
+                <p id="short-desc"></p>
+                <span id="time-left">Time Left To Buy</span><br/>
+                <span id="timer"></span>
+
+                <div class="flex-between-center">
+                    <p style="font-weight: bold" id="price"></p>
+                    <div class="cart-link-container">
+                        <a href="#" id="add-to-cart">Add To Cart</a>
+                        <span class="material-icons">shopping_cart</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="long-desc-box">
+            <h1>Item Detailed Description</h1>
+            <p id="long-desc"></p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

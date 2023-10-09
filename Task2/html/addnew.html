@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="../styles/Header.css" rel="stylesheet">
+<link href="../styles/AddNew.css" rel="stylesheet">
+<script src="../script/new_item/add_new.js" defer></script>
+<script src="../script/auth/logout.js" defer></script>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Add new coupon</title>
+</head>
+<body>
+<header>
+    <div class="header-container">
+        <div class="navbar">
+            <div class="container nav-container">
+                <div class="menu-size-container">
+                    <button class="menu-btn">
+                        <div class="hamburger-lines">
+                            <span class="line line1"></span>
+                            <span class="line line2"></span>
+                            <span class="line line3"></span>
+                        </div>
+                    </button>
+                    <a href="main.html"><img src="../img/epam_logo.svg" alt="Logo" class="header-logo"></a>
+                </div>
+                <div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header-container header-container-links">
+        <span class="material-icons gray-icon">favorite</span>
+        <a href="checkout.html"><span class="material-icons gray-icon">shopping_cart</span></a>
+
+        <ul>
+            <li><a href="login.html" class="header-link" id="loginLink">Login</a></li>
+            <li><a href="register.html" class="header-link">Sign Up</a></li>
+        </ul>
+    </div>
+</header>
+
+
+<div class="title-container">
+    <div class="size-container">
+        <div class="title-box">
+            <span>Add New Coupon</span>
+        </div>
+    </div>
+</div>
+
+
+<div class="content-container">
+    <div class="size-container">
+        <form action="" method="post" id="newItemForm">
+            <div class="grid-template-container">
+                <div>
+                    <label>Category</label><br/>
+                    <select name="category" class="dataElement">
+                        <option value="certificates" selected>Certificates</option>
+                        <option value="tags">Tags</option>
+                    </select>
+                </div>
+                <div id="itemName">
+                    <label>Item Name</label>
+                    <input type="text" name="itemName" class="dataElement">
+                </div>
+
+                <div id="short-desc-container" class="optional">
+                    <label>Description:</label><br/>
+                    <textarea name="description" class="dataElement textAreaSizing"></textarea>
+                </div>
+                <div class="optional">
+                    <label>Valid to</label><br/>
+                    <input type="date" name="validTo" class="dataElement">
+                </div>
+                <div class="optional">
+                    <label>Price</label><br/>
+                    <input type="text" name="price" class="dataElement">
+                </div>
+                <div id="btn-container">
+                    <button type="reset" id="cancelBtn">Cancel</button>
+                    <button type="submit" id="submitBtn">Sign Up</button>
+                </div>
+
+            </div>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

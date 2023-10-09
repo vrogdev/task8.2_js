@@ -1,0 +1,71 @@
+.flex-column {
+    display: flex;
+    flex-direction: column
+}
+
+.register-container {
+    height: 400px;
+    display: flex;
+    margin-top: 3%;
+    justify-content: center;
+}
+
+.register-container .size-container {
+    width: 800px;
+}
+
+.register-container .register-title-box {
+    background-color: #888888;
+    display: flex;
+    padding: 20px;
+    color: white;
+    font-weight: bold
+}
+
+.register-container .grid-template-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 15px;
+    background-color: white;
+    padding: 20px
+}
+
+.register-container input {
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    width: 100%;
+    background-color: white
+}
+
+.register-container label {
+    color: #757575;
+    font-weight: bold;
+    font-size: small
+}
+
+.register-container #btn-container {
+    display: flex;
+    justify-content: space-between;
+    grid-column: 2/3
+}
+
+.register-container button#cancelBtn {
+    background-color: white;
+    color: #828282;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: 1px solid #828282;
+    width: 45%;
+}
+
+.register-container button#submitBtn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    width: 45%;
+}
